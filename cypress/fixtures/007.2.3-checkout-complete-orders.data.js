@@ -1,0 +1,63 @@
+export default {
+  registration_guest_password: {
+    testId: new Date().getTime() + 10000,
+    email: 'mario.nexumtester+' + new Date().getTime() + 10000 + 'A@gmail.com',
+    password: '123456aA_',
+    passwordRepeat: '123456aA_',
+    salutation: '0',
+    firstName: 'Mario',
+    lastName: 'Nexum Tester',
+    street: 'Oberer Graben 1',
+    zipCode: '9000',
+    city: 'St. Gallen',
+    language: 'de',
+
+    newsletter: false,
+    phone: '+41 44 743 72 72',
+  },
+  
+  registration_guest_password_mail_exists: {
+    testId: new Date().getTime() + 20000,
+    email: 'mario.nexumtester@gmail.com',
+    password: '123456aA_',
+    passwordRepeat: '123456aA_',
+    salutation: '0',
+    firstName: 'Mario',
+    lastName: 'Nexum Tester',
+    street: 'Oberer Graben 1',
+    zipCode: '9000',
+    city: 'St. Gallen',
+    language: 'de',
+
+    newsletter: false,
+    phone: '+41 44 743 72 72',
+  },
+
+  registration_guest_no_password: {
+    testId: new Date().getTime() + 30000,
+    email: 'mario.nexumtester+' + new Date().getTime() + Math.floor(Math.random() * 100 + 1) + '@gmail.com',
+    salutation: '0',
+    firstName: 'Mario',
+    lastName: 'Nexum Tester',
+    street: 'Oberer Graben 1',
+    zipCode: '9000',
+    city: 'St. Gallen',
+    language: 'de',
+
+    newsletter: false,
+    phone: '+41 44 743 72 72',
+  },
+  registration_guest_no_password_mail_exists: {
+    testId: new Date().getTime() + 40000,
+    email: 'mario.nexumtester@gmail.com',
+    salutation: '0',
+    firstName: 'Mario',
+    lastName: 'Nexum Tester',
+    street: 'Oberer Graben 1',
+    zipCode: '9000',
+    city: 'St. Gallen',
+    language: 'de',
+    newsletter: false,
+    phone: '+41 44 743 72 72',
+  },
+}

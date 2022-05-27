@@ -1,0 +1,14 @@
+{
+  "customer": {
+    "email": "mario.nexumtester+0071@gmail.com",
+    "password": "123456aA_"
+  },
+  "customer_new": {
+    "email": "mario.nexumtester+0071@gmail.com",
+    "password": "123456aA_"
+  },
+  "store": {
+    "id": "07314523",
+    "location": "Basel - Fischmarkt"
+  }
+}

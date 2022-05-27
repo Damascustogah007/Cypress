@@ -1,0 +1,27 @@
+{
+  "name": "picasso-tests",
+  "version": "0.0.0",
+  "description": "E2E Tests for Picasso",
+  "scripts": {
+    "plop": "plop",
+    "cy:open": "cross-env NODE_PATH=. cypress open --config-file cypress-open.json",
+    "cy:run": "cross-env NODE_PATH=. node cypress-runner --config-file cypress.json"
+  },
+  "author": "Nexum Ag",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress/browserify-preprocessor": "^3.0.1",
+    "cross-env": "^7.0.2",
+    "cypress": "^6.9.1",
+    "cypress-iframe": "^1.0.1",
+    "cypress-multi-reporters": "^1.4.0",
+    "ls": "^0.2.1",
+    "mocha": "^7.2.0",
+    "mocha-junit-reporter": "^2.0.0",
+    "mochawesome": "^4.1.0",
+    "mochawesome-merge": "^4.1.0",
+    "mochawesome-report-generator": "^4.1.0",
+    "plop": "^2.7.4",
+    "prettier": "2.1.2"
+  }
+}

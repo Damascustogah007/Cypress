@@ -1,0 +1,40 @@
+/**
+ * {{upperCase epic}}
+ */
+import { defaultDevices } from 'cypress/integration/_helpers/default-devices'
+import { baseUrl } from 'cypress/fixtures/environment.js'
+
+import { customer } from 'cypress/fixtures/{{kebabCase folder}}/{{dotCase number}}-{{kebabCase name}}.data'
+
+const testSpecName = '{{dotCase number}}-{{kebabCase name}}'
+
+const targetUrl = `${baseUrl}/de/`
+
+
+devices.map((device) => {
+ describe(`${testSpecName} @@ Usecase description`, () => {
+
+    const [w, h] = device.viewport;
+
+    before(() => {
+      cy.viewport(w, h);
+      cy.clearCookies({ domain: null });
+      cy.visit(targetUrl);
+    })
+
+    beforeEach(() => {
+      cy.viewport(w, h);
+      cy.preserveDefaultCookies();
+    })
+
+    it('should login', () => {
+      let { email, password } = customer;
+      cy.loginCustomer(email, password);
+    })
+
+    it('should do something ...', () => {
+
+    })
+
+  })
+})

@@ -1,0 +1,3 @@
+# prettierignore
+
+output-data/**/*.json

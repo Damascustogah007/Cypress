@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-02-18T09:27:08.364Z",
+    "end": "2020-02-18T09:27:35.812Z",
+    "duration": 27448,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e90131ba-cb43-44d1-91c1-37a35f1899f9",
+      "title": "",
+      "fullFile": "cypress\\integration\\tests\\login2.spec.js",
+      "file": "cypress\\integration\\tests\\login2.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7eff9478-2a85-47fc-8f12-8c54dfc15505",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should create the user cookie after valid login",
+              "fullTitle": "Login should create the user cookie after valid login",
+              "timedOut": null,
+              "duration": 9715,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.getCookies().then(function (cookies) {\n  var userCookie = cookies.filter(function (cookieItem) {\n    return cookieItem.name == \"User\";\n  });\n  expect(userCookie).to.have.lengthOf(1);\n});",
+              "err": {},
+              "uuid": "a29472b1-3a5f-4e55-b2c7-c8a51a54fa31",
+              "parentUUID": "7eff9478-2a85-47fc-8f12-8c54dfc15505",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should have the salutation name after login",
+              "fullTitle": "Login should have the salutation name after login",
+              "timedOut": null,
+              "duration": 10121,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var salutationDe = loginData.salutationDe;\ncy.get(\"[data-cy=welcome-salutation]\").should(function ($div) {\n  var text = $div.text();\n  expect(text).to.include(salutationDe);\n});",
+              "err": {},
+              "uuid": "228fd1cd-f344-4600-b281-deed8ed8abd9",
+              "parentUUID": "7eff9478-2a85-47fc-8f12-8c54dfc15505",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a29472b1-3a5f-4e55-b2c7-c8a51a54fa31",
+            "228fd1cd-f344-4600-b281-deed8ed8abd9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 19836,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.1.0"
+    }
+  }
+}

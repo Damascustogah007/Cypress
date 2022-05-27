@@ -1,0 +1,33 @@
+{
+  "chromeWebSecurity": false,
+  "browser": "electron",
+  "pageLoadTimeout": 20000,
+  "defaultCommandTimeout": 10000,
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": "mochawesome, mocha-junit-reporter",
+    "mochawesomeReporterOptions": {
+      "reportDir": "cypress/reports/ci-reports/",
+      "overwrite": true,
+      "html": false,
+      "json": false,
+      "consoleReporter": "spec",
+      "timestamp": "mmddyyyy_HHMMss"
+    },
+    "mochaJunitReporterReporterOptions": {
+      "mochaFile": "cypress/reports/ci-reports/result[hash].xml",
+      "timestamp": "mmddyyyy_HHMMss",
+      "toConsole": false,
+      "includePending": true
+    }
+  },
+  "ignoreTestFiles": ["manual.*", "captures-*"],
+  "testFiles": "tests/**/*.spec.js",
+  "video": false,
+  "headless": true,
+  "env": {
+    "mode-run": true
+  },
+  "retries": 2,
+  "scrollBehavior": "center"
+}

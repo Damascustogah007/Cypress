@@ -1,0 +1,18 @@
+{
+  "user_with_visacard": {
+    "email": "mario.nexumtester+visacard@gmail.com",
+    "password": "123456aA_",
+    "name": "Visa"
+  },
+  "user_with_mastercard": {
+    "email": "mario.nexumtester+mastercard@gmail.com",
+    "password": "123456aA_",
+    "name": "Master"
+  },
+  "user_with_americanexpress": {
+    "email": "mario.nexumtester+americanexpresscard@gmail.com",
+    "password": "123456aA_",
+    "name": "Express"
+  }
+}
+  
